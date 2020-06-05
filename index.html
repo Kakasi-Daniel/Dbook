@@ -40,7 +40,7 @@
       <div class="logo">D</div>
       <div class="search-bar">
         <input type="text" placeholder="Search posts/people">
-        <span class="icon_search" ><i class="fas fa-search"></i></span>
+        <i class="fas fa-search"></i>
         <div class="results"><i class="fas fa-sad-tear"></i> You know no one is using this?</div>
       </div>
       <ul class="menu"> 
@@ -78,7 +78,7 @@
           </div>
           <div class="bottom">
             <div class="like_share">
-              <div class="like"><i class="fas fa-thumbs-up"></i>Like</div>
+            <div class="like"><i class="fas fa-thumbs-up"></i>Like</div>
             <div class="dis-like"><i class="fas fa-hand-middle-finger"></i>No-Like</div>
             </div>
             <div class="like">Save</div>
@@ -188,12 +188,6 @@
             <div class="like">Save</div>
           </div>
         </div>
-
-
-
-        
-
-
       </div>
     </div>
     <div class="go_to">
@@ -209,54 +203,7 @@
     </div>
   </div>
 
-  <script>
-    const sear = document.querySelector('input');
-    const bar = document.querySelector('.search-bar');
-    const res = document.querySelector('.results');
-    const hbtn = document.querySelector('button');
-    const drop = document.querySelector('.dropdown');
-    const dropmenu = document.querySelector('.dropdown_menu');
-    const mmenu = document.querySelector('.mob_menu');
-    const gm = document.querySelector('.goto');
-    const nl = document.querySelector('.dis-like');
-    const l = document.querySelector('.like');
-
-  
-      sear.addEventListener('input', () => {
-        if (sear.value !== ''){
-        res.style.zIndex= '20';
-        res.style.opacity = '1';
-        res.style.height= '400px';
-        }else{
-        res.style.Zindex= '-1';
-        res.style.opacity = '0';
-        res.style.height= '0';
-        }
-      })
-
-      bar.onclick = () => {
-        sear.style.width = '300px';
-      }
-
-      hbtn.onclick = () => {
-        hbtn.classList.toggle('active');
-        mmenu.classList.toggle('menu_open');
-      }
-
-      drop.onclick = () => {
-        dropmenu.classList.toggle('open');
-        gm.classList.toggle('open');
-      }
-
-      nl.addEventListener('click', e => {
-        e.target.style.color = 'red';
-      })
-      l.addEventListener('click', e => {
-        e.target.style.color = 'aqua';
-      })
-
-  
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
