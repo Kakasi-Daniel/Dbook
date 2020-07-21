@@ -94,3 +94,34 @@ nl.forEach((it) => {
 ic.forEach((it) => {
   it.addEventListener('click', (e) => {});
 });
+
+const keywords = [
+  'cars',
+  'nature',
+  'people',
+  'buildings',
+  'city',
+  'town',
+  'beach',
+  'holiday',
+  'fun',
+  'things',
+  'laptop',
+  'gaming',
+  'planes',
+  'art',
+];
+
+document.querySelectorAll('.post_img').forEach((e) => {
+  e.firstElementChild.src = `https://source.unsplash.com/1600x900/?${
+    keywords[Math.floor(Math.random() * keywords.length)]
+  }`;
+});
+
+const mowan = ['men', 'women'];
+
+document.querySelectorAll('.usr_image').forEach((e) => {
+  e.firstElementChild.src = `https://randomuser.me/api/portraits/${
+    mowan[Math.floor(Math.random() * 2)]
+  }/${Math.floor(Math.random() * 100 + 1)}.jpg`;
+});
